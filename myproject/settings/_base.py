@@ -159,7 +159,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'myproject', 'site_static'),
 ]
 
-timestamp = get_git_changeset_timestamp(BASE_DIR)
+with open(os.path.join(BASE_DIR, 'myproject', 'settings', 'last-update.txt'),
+        'r') as f:
+    timestamp = f.readline().strip()
+
+#timestamp = get_git_changeset_timestamp(BASE_DIR)
 STATIC_URL = f'/static/{timestamp}/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
