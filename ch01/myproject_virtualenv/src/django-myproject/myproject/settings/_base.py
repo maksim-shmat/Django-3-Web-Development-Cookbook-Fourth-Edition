@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     # third-party
     # ...
     # local
+    "myproject.apps.magazine",  
 ]
 
 MIDDLEWARE = [
