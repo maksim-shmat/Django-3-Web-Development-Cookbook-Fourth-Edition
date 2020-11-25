@@ -159,8 +159,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'myproject', 'site_static'),
 ]
 
-with open(os.path.join(BASE_DIR, 'myproject', 'settings', 'last-update.txt'),
-        'r') as f:
+with open(os.path.join(BASE_DIR, 'settings', 'last-update.txt'),
+        'r') as f:    #между BASE_DIR and settings было myproject и не давало включить shell из-за дублирования /myproject/myproject/last-update
     timestamp = f.readline().strip()
 
 #timestamp = get_git_changeset_timestamp(BASE_DIR)
