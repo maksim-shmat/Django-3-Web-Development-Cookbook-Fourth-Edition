@@ -48,3 +48,4 @@ venv/
 
 # Secrets
 secrets.json
+sample_secrets.json
